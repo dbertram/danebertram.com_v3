@@ -1,0 +1,34 @@
+.opacity(@opacity) {
+	@ms-opacity: @opacity * 100;
+	filter: alpha(opacity=@ms-opacity);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ms-opacity})";
+	opacity: @opacity;
+}
+
+.transform(@transform) {
+	-webkit-transform: @transform;
+	-ms-transform: @transform;
+    transform: @transform;
+}
+
+.rotate90() {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+.rotate270() {
+	-webkit-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
