@@ -1,0 +1,261 @@
+@import (reference) "mixins.less";
+@import (reference) "global_vars.less";
+
+body {
+    background: @base-dark-color url("../images/debut_dark.png") repeat fixed;
+    color: @base-light-color;
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../images/debut_dark_@2x.png");
+        background-size: 200px 200px;
+    }
+}
+
+.header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(255, 255, 255, 0.1); // create a simple "frosted glass" effect
+    border-top: 1px dashed #999;
+
+    text-shadow: @base-text-shadow;
+
+    padding: 2rem;
+}
+
+.header-nameplate > a {
+    color: @base-light-color;
+}
+
+.header-content {
+    width: 20%;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.header-avatar {
+    @avatar-size: 7rem;
+
+    display: inline-block;
+
+    width: @avatar-size;
+    height: @avatar-size;
+    border-radius: @avatar-size / 2;
+    border: 3px solid @base-light-color;
+    
+    background-image: url("../images/dane_bertram_avatar.jpg");
+    background-size: cover;
+    background-position: -0.3rem -1.2rem; // face-centering correction
+
+    box-shadow:
+        inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+        inset 0 0 2px 1px rgba(0, 0, 0, 0.05),
+        @small-box-shadow;
+}
+
+.contact-me {
+    @email-font-size: 1.2rem;
+    @email-vertical-padding: 0.25em;
+    @email-horizontal-padding: 0.75em;
+    @email-suffix-length: 3.8em;
+
+    position: fixed;
+    top: 0.25rem;
+    right: -(@email-suffix-length + @email-horizontal-padding);
+
+    z-index: 1; // make sure mouseover works even when .resume is scrolled up
+
+    font-size: @email-font-size;
+    color: @base-light-color;
+    text-decoration: none;
+    text-shadow: @base-text-shadow;
+    .opacity(0.7);
+
+    padding: @email-vertical-padding @email-horizontal-padding;
+    border-top-left-radius: @email-font-size * 0.8;
+    border-bottom-left-radius: @email-font-size * 0.8;
+
+    transition: all 0.2s ease-in-out;
+
+    &:before {
+        content: "dbertram";
+    }
+    &:after {
+        content: "gmail.com";
+    }
+    &:before, &:after {
+        .opacity(0);
+    }
+    &:hover {
+        right: -0.2em;
+        background: rgba(64, 64, 64, 0.8);
+        .opacity(1);
+
+        &:before, &:after {
+            .opacity(1);
+        }
+    }
+}
+
+.main {
+    position: relative; // so that .header's background & borders are kept "behind" .main
+    width: 80%;
+    margin-left: 20%;
+    padding: 3rem 5rem;
+}
+
+.resume {
+    margin: auto;
+    max-width: 900px;
+    background-color: #fff;
+    color: @base-dark-color;
+    border: 3px solid #ccc;
+    padding: 3rem;
+    padding-bottom: 2rem;
+
+    // START http://matthamm.com/box-shadow-curl.html
+    position: relative;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.27),
+        inset 0 0 40px rgba(0, 0, 0, 0.06);
+
+    &:before, &:after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        bottom: 10px;
+        width: 70%;
+        max-width: 300px;
+        max-height: 100px;
+        height: 55%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    &:before {
+        left: 10px;
+        .transform(skew(-15deg) rotate(-6deg));
+    }
+
+    &:after {
+        right: 10px;
+        .transform(skew(15deg) rotate(6deg));
+    }
+    // END http://matthamm.com/box-shadow-curl.html
+
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 3rem 0;
+    }
+}
+
+.resume-section {
+    h2 {
+        position: relative;
+        background-color: @base-accent-color;
+        color: #efefef;
+        text-shadow: @base-text-shadow;
+        box-shadow: @small-box-shadow;
+
+        border-radius: 0.1rem;
+
+        margin: 1.5rem -4.5rem;
+        padding: 0.15rem 4.5rem;
+    }
+
+    h3 {
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    & > ul > li {
+        margin: 0.5rem -1rem 0 -1rem;
+        padding: 1rem;
+    }
+
+    .expandable {
+        border: 1px dashed transparent;
+        border-radius: 0.5rem;
+
+        > h3 {
+            position: relative;
+            cursor: pointer;
+            padding-right: 2rem; // ensure h3 text doesn't overlap up/down arrow
+            &:before {
+                .rotate90();
+                content: "\203A";
+                position: absolute;
+                font-size: 2em;
+                color: @base-light-color;
+                top: -0.15rem;
+                right: 0;
+                transition: all 0.3s ease-out;
+            }
+        }
+
+        &:hover {
+            border-color: #ccc;
+
+            > h3:before {
+                color: #999;
+            }
+        }
+    }
+
+    .expandable-content {
+        display: none;
+        margin-top: 1.5rem;
+
+        &, ul {
+            margin-left: 1rem;
+            padding-left: 0.4rem;
+            padding-right: 2rem; // match h3 padding-right above
+        }
+
+        li {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            list-style: circle;
+        }
+    }
+
+    .expandable.expanded {
+        & > .expandable-content {
+            display: block; 
+        }
+
+        & > h3:before {
+            .rotate270();
+        }
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+
+    aside {
+        color: #999;
+        font-size: 0.9rem;
+    }
+}

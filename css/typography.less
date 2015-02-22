@@ -1,0 +1,48 @@
+@import (reference) "global_vars.less";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+// based on http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234
+html {
+    font: 100%/1.5 "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+}
+
+h1 { font-size: 2em;    /* 2*16 = 32 */       }
+h2 { font-size: 1.5em;  /* 1.5*16 = 24 */     }
+h3 { font-size: 1.17em; /* 1.17*16 = 18.72 */ }
+h4 { font-size: 1em;    /* 1*16 = 16 */       }
+h5 { font-size: 0.83em; /* 0.83*16 = 13.28 */ }
+h6 { font-size: 0.75em; /* 0.75*16 = 12 */    }
+
+p {
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+a, a:visited {
+    color: @base-accent-color;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub { top: 0.4em; }
+
+blockquote {
+    font-style: italic;
+}
+blockquote:before {
+    content: "\201C";
+    display: inline-block;
+    padding-right: 0.4em;
+}
