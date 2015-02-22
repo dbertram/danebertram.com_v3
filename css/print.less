@@ -1,3 +1,5 @@
+@import (reference) "mixins.less";
+
 @media print {
     * {
         background: transparent !important;
@@ -89,20 +91,13 @@
         .expandable {
             > h3 {
                 padding-right: 0;
-
-                &:before {
-                    display: none;
-                }
             }
 
             & > .expandable-content {
-                display: block;
                 padding-right: 0;
             }
-
-            &:hover {
-                border-color: transparent;;
-            }
         }
+
+        .non-interactive-expandable-content();
     }
 }

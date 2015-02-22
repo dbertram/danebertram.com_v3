@@ -32,3 +32,23 @@
 		clear: both;
 	}
 }
+
+.non-interactive-expandable-content() {
+    .expandable {
+        > h3 {
+            cursor: default;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        > .expandable-content {
+            display: block;
+        }
+
+        &:hover {
+            border-color: transparent;;
+        }
+    }
+}
