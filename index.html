@@ -11,7 +11,7 @@
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="no-js">
         <header class="header">
             <div class="header-content">
                 <div class="header-nameplate">
@@ -276,6 +276,7 @@
         <script src="js/jquery-2.1.3.min.js"></script>
         <!--<![endif]-->
         <script>
+            $('body').removeClass('no-js');
             $('.expandable')
                 .on('click', function toggleExpandable(event) {
                     var clickedTarget = $(event.target);
