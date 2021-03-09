@@ -66,6 +66,14 @@ abbr[title] {
         $small-box-shadow;
 }
 
+.header-icons {
+    margin-top: 1.5rem;
+
+    a:hover svg {
+        stroke-width: 2;
+    }
+}
+
 .main {
     position: relative; // so that .header's background & borders are kept "behind" .main
     width: 80%;
