@@ -1,0 +1,20 @@
+{
+  "name": "danebertram.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --color --style=compressed ./css/main.scss ./css/main.css",
+    "build:dev": "sass --watch --color ./css/main.scss ./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbertram/danebertram.com_v3.git"
+  },
+  "author": "Dane Bertram",
+  "homepage": "https://github.com/dbertram/danebertram.com_v3#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}
