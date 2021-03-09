@@ -194,6 +194,16 @@ body {
         padding: 1rem;
     }
 
+    aside {
+        color: #999;
+        font-size: 0.9rem;
+    }
+
+    ul ul aside {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
     .expandable {
         border: 1px dashed transparent;
         border-radius: 0.5rem;
@@ -252,11 +262,6 @@ body {
         &:hover {
             border-color: transparent;
         }
-    }
-
-    aside {
-        color: #999;
-        font-size: 0.9rem;
     }
 }
 
