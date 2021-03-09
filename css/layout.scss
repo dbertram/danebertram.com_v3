@@ -66,50 +66,6 @@ abbr[title] {
         $small-box-shadow;
 }
 
-.contact-me {
-    $email-font-size: 1.2rem;
-    $email-vertical-padding: 0.25em;
-    $email-horizontal-padding: 0.75em;
-    $email-suffix-length: 3.8em;
-
-    position: fixed;
-    top: 0.25rem;
-    right: -($email-suffix-length + $email-horizontal-padding);
-
-    z-index: 1; // make sure mouseover works even when .resume is scrolled up
-
-    font-size: $email-font-size;
-    color: $base-light-color;
-    text-decoration: none;
-    text-shadow: $base-text-shadow;
-    @include opacity(0.7);
-
-    padding: $email-vertical-padding $email-horizontal-padding;
-    border-top-left-radius: $email-font-size * 0.8;
-    border-bottom-left-radius: $email-font-size * 0.8;
-
-    transition: all 0.2s ease-in-out;
-
-    &:before {
-        content: "dbertram";
-    }
-    &:after {
-        content: "gmail.com";
-    }
-    &:before, &:after {
-        @include opacity(0);
-    }
-    &:hover {
-        right: -0.2em;
-        background: rgba(64, 64, 64, 0.8);
-        @include opacity(1);
-
-        &:before, &:after {
-            @include opacity(1);
-        }
-    }
-}
-
 .main {
     position: relative; // so that .header's background & borders are kept "behind" .main
     width: 80%;
