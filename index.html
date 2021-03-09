@@ -269,13 +269,10 @@
         </section>
       </article>
     </section>
-    <!--[if lt IE 9]>
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <!--<![endif]-->
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
     <script>
+      // yep, it's jQuery...in 2021...not code-split, unbundled, and F5-HMRed
+      // ...but sometimes just a little dab'll do ya, you know?
       $('body').removeClass('no-js');
       $('.expandable')
         .on('click', function toggleExpandable(event) {
