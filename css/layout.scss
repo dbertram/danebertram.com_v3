@@ -18,6 +18,10 @@ body {
     }
 }
 
+abbr[title] {
+    border-bottom: none;
+}
+
 .header {
     position: fixed;
     bottom: 0;

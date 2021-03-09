@@ -21,14 +21,12 @@
         text-decoration: none;
     }
 
-    [title]:after {
-        content: " (" attr(title) ")";
-        font-weight: normal;
+    abbr[title] {
+        text-decoration: none;
     }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-        word-wrap: break-word;
+    [title]:after {
+        content: " (" attr(title) ")";
         font-weight: normal;
     }
 
@@ -47,18 +45,9 @@
         text-align: left;
     }
 
-    .main:before {
-        display: block;
-        content: "Thanks for printing my r\00e9sum\00e9! For the most up-to-date copy please check http://danebertram.com/";
-        border: 2px solid #efefef;
-        border-radius: 1rem;
-        margin: 1rem 0 2rem 0;
-        padding: 1rem;
-        font-style: italic;
-    }
-
     .main h1 {
-        margin-bottom: 2rem;
+        margin-bottom: 0.1rem;
+        padding-top: 1rem;
 
         &:after {
             display: inline-block;
@@ -79,6 +68,13 @@
     }
 
     .resume-section {
+        &:first-of-type:before {
+            display: block;
+            content: "Thanks for printing my resume! Best viewed online at https://danebertram.com";
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
         h2 {
             margin-top: 1rem;
             margin-bottom: 0;
