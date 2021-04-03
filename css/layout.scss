@@ -94,35 +94,6 @@ abbr[title] {
     padding: 3rem;
     padding-bottom: 2rem;
 
-    // START http://matthamm.com/box-shadow-curl.html
-    position: relative;
-    box-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.27),
-        inset 0 0 40px rgba(0, 0, 0, 0.06);
-
-    &:before, &:after {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        bottom: 10px;
-        width: 70%;
-        max-width: 300px;
-        max-height: 100px;
-        height: 55%;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    &:before {
-        left: 10px;
-        @include transform(skew(-15deg) rotate(-6deg));
-    }
-
-    &:after {
-        right: 10px;
-        @include transform(skew(15deg) rotate(6deg));
-    }
-    // END http://matthamm.com/box-shadow-curl.html
-
     & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
         &:first-child {
             margin-top: 0;
