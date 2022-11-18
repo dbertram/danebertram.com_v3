@@ -1,5 +1,5 @@
-@import "mixins";
-@import "global_vars";
+@import "_mixins";
+@import "_global_vars";
 
 body {
     background: $base-dark-color url("../images/debut_dark.png") repeat fixed;
