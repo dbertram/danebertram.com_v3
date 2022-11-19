@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass --color --style=compressed ./css/main.scss ./css/main.css",
-    "build:dev": "sass --watch --color ./css/main.scss ./css/main.css"
+    "dev": "yarn start",
+    "start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "homepage": "https://github.com/dbertram/danebertram.com_v3#readme",
   "dependencies": {},
   "devDependencies": {
-    "sass": "^1.32.8"
+    "@11ty/eleventy": "^1.0.2",
+    "eleventy-sass": "^2.1.3"
   }
 }
