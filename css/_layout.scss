@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "_mixins";
 @import "_global_vars";
 
@@ -53,7 +55,7 @@ abbr[title] {
 
     width: $avatar-size;
     height: $avatar-size;
-    border-radius: $avatar-size / 2;
+    border-radius: math.div($avatar-size, 2);
     border: 3px solid $base-light-color;
     
     background-image: url("../images/dane_bertram_avatar.jpg");
