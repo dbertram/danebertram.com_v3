@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body class="no-js">
+  <body>
     <header class="header">
       <div class="header-content">
         <div class="header-nameplate">
@@ -48,19 +48,21 @@
           <h2>Experience</h2>
           <ul>
             <li class="expandable">
-              <h3>
+              <input type="checkbox" id="exp_ynab" />
+              <label for="exp_ynab">
                 Senior Full Stack Developer, <a class="company-name" href="https://youneedabudget.com/" rel="external" target="_blank">You Need A Budget</a>
                 <aside class="date-range"><time datetime="2021-06">June 2021</time> &ndash; Present</aside>
-              </h3>
+              </label>
               <ul class="expandable-content">
                 <li>Stay tuned...</li>
               </ul>
             </li>
             <li class="expandable">
-              <h3>
+              <input type="checkbox" id="exp_articulate" />
+              <label for="exp_articulate">
                 Director of Engineering, <a class="company-name" href="https://articulate.com/" rel="external" target="_blank">Articulate</a>
                 <aside class="date-range"><time datetime="2015-04">April 2015</time> &ndash; <time datetime="2021-05">May 2021</time></aside>
-              </h3>
+              </label>
               <ul class="expandable-content">
                 <li>
                   <strong>Director of Engineering - Rise.com Integrations</strong>
@@ -96,10 +98,11 @@
               </ul>
             </li>
             <li class="expandable">
-              <h3>
+              <input type="checkbox" id="exp_glitch" />
+              <label for="exp_glitch">
                 Member of Technical Staff, Fog Creek Software (now <a class="company-name" href="https://glitch.com/" rel="external" target="_blank">Glitch</a>)
                 <aside class="date-range"><time datetime="2008-06">June 2008</time> &ndash; <time datetime="2015-04">April 2015</time></aside>
-              </h3>
+              </label>
               <ul class="expandable-content">
                 <li>Spearheaded Fog Creek's first internal developer mentorship program</li>
                 <li>Led team of three full-time engineers, three engineering interns, and one designer to create FogBugz' notification center, personal activity feeds, and periodic email notification system as part of Fog Creek's 2014 &ldquo;Project Jackalope&rdquo; intern class</li>
@@ -112,10 +115,11 @@
               </ul>
             </li>
             <li class="expandable">
-              <h3>
+              <input type="checkbox" id="exp_uwindsor" />
+              <label for="exp_uwindsor">
                 Computing Consultant, <a class="company-name" href="https://uwindsor.ca/" rel="external" target="_blank">University of Windsor</a>
                 <aside class="date-range"><time datetime="2007-01">January 2007</time> &ndash; <time datetime="2007-08">August 2007</time></aside>
-              </h3>
+              </label>
               <ul class="expandable-content">
                 <li>Self-initiated and co-authored UWindsor.ca website template redesign to increase web and accessibility standards compliance</li>
                 <li>Designed and implemented reusable bulk-emailing web application that recorded readership statistics and campaign tracking information</li>
@@ -153,10 +157,11 @@
           <h2>Education</h2>
           <ul>
             <li class="expandable">
-              <h3>
+              <input type="checkbox" id="edu_ucalgary" />
+              <label for="edu_ucalgary">
                 Master of Science - Computer Science, <a class="company-name" href="https://ucalgary.ca/" rel="external" target="_blank">University of Calgary</a>
                 <aside class="date-range"><time datetime="2007-09">September 2007</time> &ndash; <time datetime="2009-12">December 2009</time></aside>
-              </h3>
+              </label>
               <ul class="expandable-content">
                 <li>
                   Research Area
@@ -181,10 +186,11 @@
               </ul>
             </li>
             <li class="expandable">
-              <h3>
+              <input type="checkbox" id="edu_uwindsor" />
+              <label for="edu_uwindsor">
                 Bachelor of Science (Honours) Co-op - Computer Science, <a class="company-name" href="https://uwindsor.ca/" rel="external" target="_blank">University of Windsor</a>
                 <aside class="date-range"><time datetime="2002-09">September 2002</time> &ndash; <time datetime="2007-04">April 2007</time></aside>
-              </h3>
+              </label>
               <ul class="expandable-content">
                 <li>
                   Specialization
@@ -212,23 +218,6 @@
         </section>
       </article>
     </section>
-    <script src="js/jquery-3.6.0.slim.min.js"></script>
-    <script>
-      // yep, it's jQuery...in 2021...not code-split, unbundled, and F5-HMRed
-      // ...but sometimes just a little dab'll do ya, you know?
-      $('body').removeClass('no-js');
-      $('.expandable')
-        .on('click', function toggleExpandable(event) {
-          var clickedTarget = $(event.target);
-          var clickedInLink = clickedTarget.closest('a').length > 0;
-          var clickedInExpandableContent = clickedTarget.closest('.expandable-content').length > 0;
-          if (clickedInLink || clickedInExpandableContent) {
-            return;
-          }
-          $(event.currentTarget).toggleClass('expanded');
-        })
-      ;
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5SPSV9GMZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
