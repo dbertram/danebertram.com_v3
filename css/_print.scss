@@ -8,12 +8,12 @@
         text-shadow: none !important;
     }
 
-    p, h2, h3 {
+    p, h2, h3, label {
         orphans: 3;
         widows: 3;
     }
 
-    h2, h3 {
+    h2, h3, label {
         page-break-after: avoid;
     }
 
@@ -85,15 +85,18 @@
         }
 
         .expandable {
-            > h3 {
+            > label {
                 padding-right: 0;
+
+                &:before {
+                    display: none;
+                }
             }
 
             & > .expandable-content {
+                display: block;
                 padding-right: 0;
             }
         }
-
-        @include non-interactive-expandable-content();
     }
 }

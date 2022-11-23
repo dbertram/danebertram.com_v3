@@ -153,10 +153,13 @@ abbr[title] {
         border: 1px dashed transparent;
         border-radius: 0.5rem;
 
-        > h3 {
+        > label {
+            display: block;
+            font-size: 1.17em; // behave as h3
             position: relative;
             cursor: pointer;
-            padding-right: 2rem; // ensure h3 text doesn't overlap up/down arrow
+            padding-right: 2rem; // ensure label text doesn't overlap up/down arrow
+
             &:before {
                 @include rotate90();
                 content: "\203A";
@@ -172,9 +175,27 @@ abbr[title] {
         &:hover {
             border-color: #ccc;
 
-            > h3:before {
+            > label:before {
                 color: #999;
             }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input:checked {
+            & ~ label:before {
+                @include rotate270();
+            }
+
+            & ~ .expandable-content {
+                display: block;
+            }
+        }
+
+        &:has(input:checked):hover {
+            border-color: transparent;
         }
     }
 
@@ -185,7 +206,7 @@ abbr[title] {
         &, ul {
             margin-left: 1rem;
             padding-left: 0.4rem;
-            padding-right: 2rem; // match h3 padding-right above
+            padding-right: 2rem; // match label padding-right above
         }
 
         li {
@@ -194,22 +215,4 @@ abbr[title] {
             list-style: circle;
         }
     }
-
-    .expandable.expanded {
-        & > .expandable-content {
-            display: block; 
-        }
-
-        & > h3:before {
-            @include rotate270();
-        }
-
-        &:hover {
-            border-color: transparent;
-        }
-    }
-}
-
-.no-js .resume-section {
-    @include non-interactive-expandable-content();
 }
