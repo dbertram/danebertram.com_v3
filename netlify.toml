@@ -1,3 +1,8 @@
 [build]
   publish = "_site"
   command = "yarn build"
+
+[[redirects]]
+  from = "/doublecheck/*"
+  to = "https://doublecheck.netlify.app/:splat"
+  status = 200
