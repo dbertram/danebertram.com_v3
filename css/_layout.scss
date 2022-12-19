@@ -219,3 +219,54 @@ abbr[title] {
         }
     }
 }
+
+@media (max-width: $mobile-layout-max-breakpoint) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        padding: 1rem;
+        padding-top: 1.5rem;
+        position: inherit;
+
+        &-content {
+            width: 100%;
+        }
+    }
+
+    .header-name {
+        margin: 0.5rem 0;
+    }
+
+    .header-text {
+        p {
+            line-height: 1;
+        }
+    }
+
+    .header-icons {
+        margin-top: 1rem;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0;
+        padding: 2rem 3rem;
+    }
+
+    .resume {
+        padding: 1rem 2rem;
+        padding-bottom: 1rem;
+
+        h1 {
+            display: none;
+        }
+
+        &-section {
+            h2 {
+                margin: 1.5rem -3.5rem;
+            }
+        }
+    }
+}
