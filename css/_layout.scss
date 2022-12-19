@@ -38,34 +38,37 @@ abbr[title] {
     padding: 2rem;
 }
 
-.header-nameplate > a {
-    color: $base-light-color;
-}
-
 .header-content {
     width: 20%;
     font-size: 0.9rem;
     text-align: center;
 }
 
-.header-avatar {
-    $avatar-size: 7rem;
+.header-nameplate {
+    h2 {
+        color: $base-light-color;
+    }
 
-    display: inline-block;
+    &::before {
+        $avatar-size: 7rem;
 
-    width: $avatar-size;
-    height: $avatar-size;
-    border-radius: math.div($avatar-size, 2);
-    border: 3px solid $base-light-color;
-    
-    background-image: url("../images/dane_bertram_avatar.jpg");
-    background-size: cover;
-    background-position: -0.3rem -1.2rem; // face-centering correction
+        content: '';
+        display: inline-block;
 
-    box-shadow:
-        inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-        inset 0 0 2px 1px rgba(0, 0, 0, 0.05),
-        $small-box-shadow;
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: math.div($avatar-size, 2);
+        border: 3px solid $base-light-color;
+
+        background-image: url("../images/dane_bertram_avatar.jpg");
+        background-size: cover;
+        background-position: -0.3rem -1.2rem; // face-centering correction
+
+        box-shadow:
+            inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+            inset 0 0 2px 1px rgba(0, 0, 0, 0.05),
+            $small-box-shadow;
+    }
 }
 
 .header-icons {
