@@ -4,14 +4,8 @@
 html {
     box-sizing: border-box;
 }
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: inherit;
-}
-
-.clearfix:after, .clearfix:before {
-	content: "";
-	display: table;
-	clear: both;
 }
 
 @import "_typography";
