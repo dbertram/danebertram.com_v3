@@ -223,7 +223,7 @@ abbr[title] {
     }
 }
 
-@media (max-width: $mobile-layout-max-breakpoint) {
+@media only screen and (max-width: $mobile-layout-max-breakpoint) {
     body {
         font-size: 0.9rem;
     }
