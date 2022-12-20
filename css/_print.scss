@@ -23,7 +23,7 @@
         text-decoration: none;
     }
 
-    [title]:after {
+    [title]::after {
         content: " (" attr(title) ")";
         font-weight: normal;
     }
@@ -34,9 +34,6 @@
 
     .main, .resume {
         position: static;
-        -ms-transform: none;
-        transform: none;
-        filter: none;
         width: 95%;
         margin: 1rem;
         padding: 0;
@@ -47,7 +44,7 @@
         margin-bottom: 0.1rem;
         padding-top: 1rem;
 
-        &:after {
+        &::after {
             display: inline-block;
             content: "(dbertram@gmail.com)";
             margin-left: 0.5em;
@@ -59,14 +56,10 @@
     .resume {
         border: none;
         max-width: none;
-
-        &:before, &:after {
-            display: none;
-        }
     }
 
     .resume-section {
-        &:first-of-type:before {
+        &:first-of-type::before {
             display: block;
             content: "Thanks for printing my resume! Best viewed online at https://danebertram.com";
             font-style: italic;
