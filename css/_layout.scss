@@ -229,6 +229,8 @@ abbr[title] {
     }
 
     .header {
+        background-color: transparent;
+        border-top: none;
         padding: 1rem;
         padding-top: 1.5rem;
         position: inherit;
@@ -255,12 +257,14 @@ abbr[title] {
     .main {
         width: 100%;
         margin-left: 0;
-        padding: 2rem 3rem;
+        padding: 0;
     }
 
     .resume {
-        padding: 1rem 2rem;
+        border: none;
+        padding: 2rem;
         padding-bottom: 1rem;
+        padding-top: 0.5rem;
 
         h1 {
             display: none;
@@ -268,7 +272,37 @@ abbr[title] {
 
         &-section {
             h2 {
-                margin: 1.5rem -3.5rem;
+                margin: 1.5rem -2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .expandable {
+                input:checked {
+                    & ~ label {
+                        border-bottom: 1px solid $base-medium-color;
+                        padding-right: 2rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+
+            .expandable-content {
+                margin-left: 0;
+                padding-left: 1rem;
+                padding-right: 0;
+
+                &:has(ul) {
+                    padding-left: 0;
+                }
+
+                ul {
+                    padding-right: 0;
+                }
+
+                > li:has(ul) {
+                    list-style: none;
+                }
             }
         }
     }
