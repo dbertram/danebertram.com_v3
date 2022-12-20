@@ -1,6 +1,5 @@
 @use "sass:math";
 
-@import "_mixins";
 @import "_global_vars";
 
 body {
@@ -163,23 +162,26 @@ abbr[title] {
             cursor: pointer;
             padding-right: 2rem; // ensure label text doesn't overlap up/down arrow
 
-            &:before {
-                @include rotate90();
-                content: "\203A";
+            &::before {
+                content: "";
+                border-bottom: 2px solid $base-light-color;
+                border-right: 2px solid $base-light-color;
                 position: absolute;
-                font-size: 2em;
-                color: $base-light-color;
-                top: -0.15rem;
-                right: 0;
-                transition: all 0.3s ease-out;
+                top: 0.4rem;
+                right: 0.1rem;
+                transform: rotate(45deg);
+                transition: transform 0.2s ease-out;
+                width: 12px;
+                height: 12px;
+                border-radius: 2px;
             }
         }
 
         &:hover {
             border-color: #ccc;
 
-            > label:before {
-                color: #999;
+            > label::before {
+                border-color: $base-medium-color;
             }
         }
 
@@ -188,8 +190,9 @@ abbr[title] {
         }
 
         input:checked {
-            & ~ label:before {
-                @include rotate270();
+            & ~ label::before {
+                transform: rotate(225deg);
+                top: 0.6rem;
             }
 
             & ~ .expandable-content {
