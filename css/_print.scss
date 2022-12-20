@@ -77,9 +77,7 @@
 
         .expandable {
             > label {
-                border-bottom: none !important;
-                padding-bottom: 0 !important;
-                padding-right: 0 !important;
+                padding-right: 0;
 
                 &:before {
                     display: none;
@@ -89,6 +87,10 @@
             & > .expandable-content {
                 display: block;
                 padding-right: 0;
+
+                ul {
+                    padding-right: 0;
+                }
             }
         }
     }
