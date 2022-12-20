@@ -3,307 +3,307 @@
 @import "_global_vars";
 
 body {
-    background: $base-dark-color url("../images/debut_dark.png") repeat fixed;
-    color: $base-light-color;
+  background: $base-dark-color url("../images/debut_dark.png") repeat fixed;
+  color: $base-light-color;
 
-    @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (   min--moz-device-pixel-ratio: 2),
-    only screen and (     -o-min-device-pixel-ratio: 2/1),
-    only screen and (        min-device-pixel-ratio: 2),
-    only screen and (                min-resolution: 192dpi),
-    only screen and (                min-resolution: 2dppx) {
-        /* on retina, use image that's scaled by 2 */
-        background-image: url("../images/debut_dark_@2x.png");
-        background-size: 200px 200px;
-    }
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url("../images/debut_dark_@2x.png");
+    background-size: 200px 200px;
+  }
 }
 
 abbr[title] {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .header {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    background-color: rgba(255, 255, 255, 0.1); // create a simple "frosted glass" effect
-    border-top: 1px dashed $base-medium-color;
+  background-color: rgba(255, 255, 255, 0.1); // create a simple "frosted glass" effect
+  border-top: 1px dashed $base-medium-color;
 
-    text-shadow: $base-text-shadow;
+  text-shadow: $base-text-shadow;
 
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .header-content {
-    width: 20%;
-    font-size: 0.9rem;
-    text-align: center;
+  width: 20%;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .header-nameplate {
-    h2 {
-        color: $base-light-color;
-    }
+  h2 {
+    color: $base-light-color;
+  }
 
-    &::before {
-        $avatar-size: 7rem;
+  &::before {
+    $avatar-size: 7rem;
 
-        content: '';
-        display: inline-block;
+    content: '';
+    display: inline-block;
 
-        width: $avatar-size;
-        height: $avatar-size;
-        border-radius: math.div($avatar-size, 2);
-        border: 3px solid $base-light-color;
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: math.div($avatar-size, 2);
+    border: 3px solid $base-light-color;
 
-        background-image: url("../images/dane_bertram_avatar.jpg");
-        background-size: cover;
-        background-position: -0.3rem -1.2rem; // face-centering correction
+    background-image: url("../images/dane_bertram_avatar.jpg");
+    background-size: cover;
+    background-position: -0.3rem -1.2rem; // face-centering correction
 
-        box-shadow:
-            inset 2px 2px 5px rgba(0, 0, 0, 0.5),
-            inset 0 0 2px 1px rgba(0, 0, 0, 0.05),
-            $small-box-shadow;
-    }
+    box-shadow:
+      inset 2px 2px 5px rgba(0, 0, 0, 0.5),
+      inset 0 0 2px 1px rgba(0, 0, 0, 0.05),
+      $small-box-shadow;
+  }
 }
 
 .header-icons {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 
-    a + a {
-        margin-left: 1rem;
-    }
+  a + a {
+    margin-left: 1rem;
+  }
 
-    a:hover svg {
-        stroke-width: 2;
-    }
+  a:hover svg {
+    stroke-width: 2;
+  }
 }
 
 .main {
-    position: relative; // so that .header's background & borders are kept "behind" .main
-    width: 80%;
-    margin-left: 20%;
-    padding: 3rem 5rem;
+  position: relative; // so that .header's background & borders are kept "behind" .main
+  width: 80%;
+  margin-left: 20%;
+  padding: 3rem 5rem;
 }
 
 .resume {
-    margin: auto;
-    max-width: 900px;
-    background-color: $white;
-    color: $base-dark-color;
-    border: 3px solid $base-light-color;
-    padding: 3rem;
-    padding-bottom: 2rem;
+  margin: auto;
+  max-width: 900px;
+  background-color: $white;
+  color: $base-dark-color;
+  border: 3px solid $base-light-color;
+  padding: 3rem;
+  padding-bottom: 2rem;
 
-    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
-        &:first-child {
-            margin-top: 0;
-        }
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+    &:first-child {
+      margin-top: 0;
     }
+  }
 
-    h1 {
-        font-size: 2.5em;
-        margin: 3rem 0;
-    }
+  h1 {
+    font-size: 2.5em;
+    margin: 3rem 0;
+  }
 }
 
 .resume-section {
-    h2 {
-        position: relative;
-        background-color: $base-accent-color;
-        color: $base-lightest-color;
-        text-shadow: $base-text-shadow;
-        box-shadow: $small-box-shadow;
+  h2 {
+    position: relative;
+    background-color: $base-accent-color;
+    color: $base-lightest-color;
+    text-shadow: $base-text-shadow;
+    box-shadow: $small-box-shadow;
 
-        border-radius: 0.1rem;
+    border-radius: 0.1rem;
 
-        margin: 1.5rem -4.5rem;
-        padding: 0.15rem 4.5rem;
+    margin: 1.5rem -4.5rem;
+    padding: 0.15rem 4.5rem;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  & > ul > li {
+    margin: 0.5rem -1rem 0 -1rem;
+    padding: 1rem;
+  }
+
+  aside {
+    color: $base-medium-color;
+    font-size: 0.9rem;
+  }
+
+  ul ul aside {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .expandable {
+    border: 1px dashed transparent;
+    border-radius: 0.5rem;
+
+    > label {
+      display: block;
+      font-size: 1.17em; // behave as h3
+      position: relative;
+      cursor: pointer;
+      padding-right: 2rem; // ensure label text doesn't overlap up/down arrow
+
+      &::before {
+        content: "";
+        border-bottom: 2px solid $base-light-color;
+        border-right: 2px solid $base-light-color;
+        position: absolute;
+        top: 0.4rem;
+        right: 0.1rem;
+        transform: rotate(45deg);
+        transition: transform 0.2s ease-out;
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+      }
     }
 
-    h3 {
-        font-weight: normal;
-        margin-top: 0;
-        margin-bottom: 0;
+    &:hover {
+      border-color: $base-light-color;
+
+      > label::before {
+        border-color: $base-medium-color;
+      }
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+    input[type="checkbox"] {
+      display: none;
     }
 
-    & > ul > li {
-        margin: 0.5rem -1rem 0 -1rem;
-        padding: 1rem;
+    input:checked {
+      & ~ label::before {
+        transform: rotate(225deg);
+        top: 0.6rem;
+      }
+
+      & ~ .expandable-content {
+        display: block;
+      }
     }
 
-    aside {
-        color: $base-medium-color;
-        font-size: 0.9rem;
+    &:has(input:checked):hover {
+      border-color: transparent;
+    }
+  }
+
+  .expandable-content {
+    display: none;
+    margin-top: 1.5rem;
+
+    &, ul {
+      margin-left: 1rem;
+      padding-left: 0.4rem;
+      padding-right: 2rem; // match label padding-right above
     }
 
-    ul ul aside {
-        display: inline-block;
-        margin-left: 5px;
+    li {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      list-style: circle;
     }
-
-    .expandable {
-        border: 1px dashed transparent;
-        border-radius: 0.5rem;
-
-        > label {
-            display: block;
-            font-size: 1.17em; // behave as h3
-            position: relative;
-            cursor: pointer;
-            padding-right: 2rem; // ensure label text doesn't overlap up/down arrow
-
-            &::before {
-                content: "";
-                border-bottom: 2px solid $base-light-color;
-                border-right: 2px solid $base-light-color;
-                position: absolute;
-                top: 0.4rem;
-                right: 0.1rem;
-                transform: rotate(45deg);
-                transition: transform 0.2s ease-out;
-                width: 12px;
-                height: 12px;
-                border-radius: 2px;
-            }
-        }
-
-        &:hover {
-            border-color: $base-light-color;
-
-            > label::before {
-                border-color: $base-medium-color;
-            }
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        input:checked {
-            & ~ label::before {
-                transform: rotate(225deg);
-                top: 0.6rem;
-            }
-
-            & ~ .expandable-content {
-                display: block;
-            }
-        }
-
-        &:has(input:checked):hover {
-            border-color: transparent;
-        }
-    }
-
-    .expandable-content {
-        display: none;
-        margin-top: 1.5rem;
-
-        &, ul {
-            margin-left: 1rem;
-            padding-left: 0.4rem;
-            padding-right: 2rem; // match label padding-right above
-        }
-
-        li {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            list-style: circle;
-        }
-    }
+  }
 }
 
 @media only screen and (max-width: $mobile-layout-max-breakpoint) {
-    body {
-        font-size: 0.9rem;
+  body {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    background-color: transparent;
+    border-top: none;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    position: inherit;
+
+    &-content {
+      width: 100%;
+    }
+  }
+
+  .header-name {
+    margin: 0.5rem 0;
+  }
+
+  .header-text {
+    p {
+      line-height: 1;
+    }
+  }
+
+  .header-icons {
+    margin-top: 1rem;
+  }
+
+  .main {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .resume {
+    border: none;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+
+    h1 {
+      display: none;
     }
 
-    .header {
-        background-color: transparent;
-        border-top: none;
-        padding: 1rem;
-        padding-top: 1.5rem;
-        position: inherit;
+    &-section {
+      h2 {
+        margin: 1.5rem -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
 
-        &-content {
-            width: 100%;
+      .expandable {
+        input:checked {
+          & ~ label {
+            border-bottom: 1px solid $base-medium-color;
+            padding-right: 2rem;
+            padding-bottom: 1rem;
+          }
         }
-    }
+      }
 
-    .header-name {
-        margin: 0.5rem 0;
-    }
-
-    .header-text {
-        p {
-            line-height: 1;
-        }
-    }
-
-    .header-icons {
-        margin-top: 1rem;
-    }
-
-    .main {
-        width: 100%;
+      .expandable-content {
         margin-left: 0;
-        padding: 0;
-    }
+        padding-left: 1rem;
+        padding-right: 0;
 
-    .resume {
-        border: none;
-        padding: 2rem;
-        padding-bottom: 1rem;
-        padding-top: 0.5rem;
-
-        h1 {
-            display: none;
+        &:has(ul) {
+          padding-left: 0;
         }
 
-        &-section {
-            h2 {
-                margin: 1.5rem -2rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-
-            .expandable {
-                input:checked {
-                    & ~ label {
-                        border-bottom: 1px solid $base-medium-color;
-                        padding-right: 2rem;
-                        padding-bottom: 1rem;
-                    }
-                }
-            }
-
-            .expandable-content {
-                margin-left: 0;
-                padding-left: 1rem;
-                padding-right: 0;
-
-                &:has(ul) {
-                    padding-left: 0;
-                }
-
-                ul {
-                    padding-right: 0;
-                }
-
-                > li:has(ul) {
-                    list-style: none;
-                }
-            }
+        ul {
+          padding-right: 0;
         }
+
+        > li:has(ul) {
+          list-style: none;
+        }
+      }
     }
+  }
 }

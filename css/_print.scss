@@ -1,97 +1,97 @@
 @media print {
-    * {
-        background: transparent !important;
-        color: $black !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
+  * {
+    background: transparent !important;
+    color: $black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  p, h2, h3, label {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3, label {
+    page-break-after: avoid;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  abbr[title] {
+    text-decoration: none;
+  }
+
+  [title]::after {
+    content: " (" attr(title) ")";
+    font-weight: normal;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .main, .resume {
+    position: static;
+    width: 95%;
+    margin: 1rem;
+    padding: 0;
+    text-align: left;
+  }
+
+  .main h1 {
+    margin-bottom: 0.1rem;
+    padding-top: 1rem;
+
+    &::after {
+      display: inline-block;
+      content: "(dbertram@gmail.com)";
+      margin-left: 0.5em;
+      font-weight: normal;
+      font-size: 2rem;
+    }
+  }
+
+  .resume {
+    border: none;
+    max-width: none;
+  }
+
+  .resume-section {
+    &:first-of-type::before {
+      display: block;
+      content: "Thanks for printing my resume! Best viewed online at https://danebertram.com";
+      font-style: italic;
+      margin-bottom: 2rem;
     }
 
-    p, h2, h3, label {
-        orphans: 3;
-        widows: 3;
+    h2 {
+      margin-top: 1rem;
+      margin-bottom: 0;
     }
 
-    h2, h3, label {
-        page-break-after: avoid;
+    ul > li {
+      margin-top: 0;
     }
 
-    a {
-        text-decoration: none;
-    }
+    .expandable {
+      > label {
+        padding-right: 0;
 
-    abbr[title] {
-        text-decoration: none;
-    }
-
-    [title]::after {
-        content: " (" attr(title) ")";
-        font-weight: normal;
-    }
-
-    .header {
-        display: none;
-    }
-
-    .main, .resume {
-        position: static;
-        width: 95%;
-        margin: 1rem;
-        padding: 0;
-        text-align: left;
-    }
-
-    .main h1 {
-        margin-bottom: 0.1rem;
-        padding-top: 1rem;
-
-        &::after {
-            display: inline-block;
-            content: "(dbertram@gmail.com)";
-            margin-left: 0.5em;
-            font-weight: normal;
-            font-size: 2rem;
+        &:before {
+          display: none;
         }
+      }
+
+      & > .expandable-content {
+        display: block;
+        padding-right: 0;
+
+        ul {
+          padding-right: 0;
+        }
+      }
     }
-
-    .resume {
-        border: none;
-        max-width: none;
-    }
-
-    .resume-section {
-        &:first-of-type::before {
-            display: block;
-            content: "Thanks for printing my resume! Best viewed online at https://danebertram.com";
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
-
-        h2 {
-            margin-top: 1rem;
-            margin-bottom: 0;
-        }
-
-        ul > li {
-            margin-top: 0;
-        }
-
-        .expandable {
-            > label {
-                padding-right: 0;
-
-                &:before {
-                    display: none;
-                }
-            }
-
-            & > .expandable-content {
-                display: block;
-                padding-right: 0;
-
-                ul {
-                    padding-right: 0;
-                }
-            }
-        }
-    }
+  }
 }
