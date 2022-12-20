@@ -1,0 +1,11 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "search.exclude": {
+    "node_modules": true,
+    "yarn.lock": true,
+    "_site": true
+  }
+}
