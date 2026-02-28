@@ -1,8 +1,10 @@
+@use "sass:color";
+
 $base-dark-color: #333;
 $base-medium-color: #999;
 $base-light-color: #ccc;
 $base-lightest-color: #efefef;
-$base-accent-color: lighten(#336699, 15%);
+$base-accent-color: color.adjust(#336699, $lightness: 15%);
 $base-shadow-color: rgba(0, 0, 0, 0.5);
 
 $white: #fff;

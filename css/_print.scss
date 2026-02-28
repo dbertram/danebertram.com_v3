@@ -1,3 +1,5 @@
+@use "_global_vars" as *;
+
 @media print {
   * {
     background: transparent !important;

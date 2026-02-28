@@ -1,6 +1,5 @@
 @use "sass:math";
-
-@import "_global_vars";
+@use "_global_vars" as *;
 
 body {
   background: $base-dark-color url("../images/debut_dark.png") repeat fixed;
