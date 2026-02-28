@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="keywords" content="{{ site.keywords }}" />
+
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:image" content="{{ site.image }}">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a class="header-nameplate" href="{{ site.header.nameplate_email }}" rel="author">
+          <h2 class="header-name">{{ site.name }}</h2>
+        </a>
+        <div class="header-text">
+          <p>{{ site.header.tagline_html | safe }}</p>
+        </div>
+        <div class="header-icons">
+          {% for icon in site.header.icons %}
+            <a href="{{ icon.href }}" rel="{{ icon.rel }}" target="{{ icon.target }}" aria-label="{{ icon.title }}" title="{{ icon.title }}">
+              {% inlineIcon icon.name %}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <article class="resume">
+        <h1>{{ site.name }}</h1>
+        {{ content | safe }}
+      </article>
+    </section>
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.gtag_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.analytics.gtag_id }}');
+    </script>
+  </body>
+</html>

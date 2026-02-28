@@ -1,0 +1,181 @@
+{
+  "experience": [
+    {
+      "id": "ynab",
+      "title": "Senior Full Stack Developer",
+      "company": {
+        "name": "YNAB",
+        "url": "https://www.ynab.com/",
+        "abbr_title": "You Need A Budget"
+      },
+      "start": "2021-06",
+      "end": null,
+      "highlights": [
+        "Building, <span title=\"only occasionally ;)\">breaking</span>, and shipping things"
+      ]
+    },
+    {
+      "id": "articulate",
+      "title": "Director of Engineering",
+      "company": {
+        "name": "Articulate",
+        "url": "https://articulate.com/"
+      },
+      "start": "2015-04",
+      "end": "2021-05",
+      "positions": [
+        {
+          "title": "Director of Engineering - Rise.com Integrations",
+          "start": "2019-06",
+          "end": "2021-05",
+          "highlights": [
+            "Built integrations team from scratch completing a customer-facing <a href=\"https://help.rise.com/en/collections/2461593-rise-api-and-integrations#rest-api\" rel=\"external\" target=\"_blank\">REST API</a>, <a href=\"https://zapier.com/apps/rise/integrations\" rel=\"external\" target=\"_blank\">Zapier integration</a>, and <a href=\"https://articulate.slack.com/apps/A01DSAKM3K7-rise\" rel=\"external\" target=\"_blank\">Slack app</a> within first 9 months",
+            "Onboarded and transitioned operation of 360 Web team to 360 Desktop developers with no significant pager incidents or functionality regressions making it to production",
+            "Responsible for hiring, onboarding, and mentorship of direct reports two of which were promoted into larger scope-of-influence positions at Articulate within 2 years of hiring"
+          ]
+        },
+        {
+          "title": "Engineering Manager - 360 Web",
+          "start": "2017-05",
+          "end": "2019-06",
+          "highlights": [
+            "Responsible for 15+ microservices (Node.js, Rails, and Lambda/Fargate backends, React + webpack frontends)",
+            "Consolidated management of bugs and feature requests streamlining task prioritization, improving visibility to leadership, and expediting delivery of projects",
+            "Improved logging, debuggability, and reliability of services reducing paging incidents from weekly to less than once a quarter",
+            "Created full-stack developer tech challenge adopted by multiple teams and used successfully to double my number of direct reports",
+            "Introduced architecture and shipped first <abbr title=\"Javascript, APIs, and Markup\">Jamstack</abbr> project at the company: <a href=\"https://training.articulate.com\" rel=\"external\" target=\"_blank\">https://training.articulate.com</a>"
+          ]
+        },
+        {
+          "title": "Senior Software Engineer - 360 Desktop",
+          "start": "2015-04",
+          "end": "2017-05",
+          "highlights": [
+            "Rearchitected desktop &quot;feature flags&quot; into declarative framework enabling release-channel-specific and build-configuration-specific features along with in-app UI for configuration of pre-release features for use by developers and QA",
+            "Led transition of <a href=\"https://github.com/speceasy/speceasy\" rel=\"external\" target=\"_blank\">SpecEasy</a> into its own GitHub organization while adding NUnit 3.x support, numerous bug fixes, and usability improvements along the way",
+            "Implemented full-stack &quot;Stock Media&quot; feature including desktop search &amp; browsing UX (C#) and backend REST API (Node.js) for <a href=\"https://articulate.com/360/content-library#vid--cl--3\" rel=\"external\" target=\"_blank\">&quot;Content Library 360 - Stock Images &amp; Videos&quot;</a> release",
+            "Dev lead for &quot;Side-by-side installation&quot; project that enabled simultaneous installation of multiple desktop release channels easing internal QA testing as well as customer-facing release management",
+            "Ported desktop build scripts from home-spun batch files + TeamCity-specific build steps to a unified set of <a href=\"https://cakebuild.net/\" rel=\"external\" target=\"_blank\">Cake</a>-based build scripts maintained under version control alongside core application code"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glitch",
+      "title": "Member of Technical Staff",
+      "company": {
+        "name": "Fog Creek Software",
+        "suffix_html": "(now <a class=\"company-name\" href=\"https://glitch.com/\" rel=\"external\" target=\"_blank\">Glitch</a>)"
+      },
+      "start": "2008-06",
+      "end": "2015-04",
+      "highlights": [
+        "Spearheaded Fog Creek's first internal developer mentorship program",
+        "Led team of three full-time engineers, three engineering interns, and one designer to create FogBugz' notification center, personal activity feeds, and periodic email notification system as part of Fog Creek's 2014 &ldquo;Project Jackalope&rdquo; intern class",
+        "Among first employees to successfully transition to working fully remotely from Fog Creek's NYC headquarters; improving internal communication tools and policies in the process",
+        "Designed and implemented re-architecture of FogBugz &ldquo;search and filter&rdquo; interface from a poor performing SQL-centric search service to a hybrid SQL/NoSQL service backed by Elasticsearch yielding 10-100x reduction in query response times",
+        "Co-authored initial single-page application rewrite of FogBugz using ASP.NET MVC for the JSON API backend and our own client-side MVC framework frontend",
+        "Co-created &ldquo;WebPutty&rdquo;, a real-time CSS editor, taking the idea from initial concept to public release within six weeks and later prompted the open-sourcing of the project",
+        "Mentored a group of three engineering interns who modernized the core wiki article editing experience within FogBugz migrating and rearchitecting in-house WYSIWYG editor functionality to integrate with a commercial 3rd party editor",
+        "Implemented, refined, and wrote sample widgets for the &ldquo;WikiBlock&rdquo; plugin API used to create custom widgets within FogBugz wiki articles"
+      ]
+    },
+    {
+      "id": "uwindsor",
+      "title": "Computing Consultant",
+      "company": {
+        "name": "University of Windsor",
+        "url": "https://uwindsor.ca/"
+      },
+      "start": "2007-01",
+      "end": "2007-08",
+      "highlights": [
+        "Self-initiated and co-authored UWindsor.ca website template redesign to increase web and accessibility standards compliance",
+        "Designed and implemented reusable bulk-emailing web application that recorded readership statistics and campaign tracking information",
+        "Maintained and enhanced multiple existing Lotus Notes Domino web applications across multiple departments on campus",
+        "Independently captured requirements for, designed, and delivered multiple new Lotus Notes Domino web applications",
+        "Successfully coordinated multiple time-sensitive projects between various faculties, departments, and external consulting firms"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Day-to-day usage of&hellip;",
+      "details": "JavaScript (ES6, node, webpack, react, ramda, etc.), Docker, AWS, Git/GitHub, PostgreSQL, Redis, HTML5 &amp; CSS3"
+    },
+    {
+      "title": "Previous in-depth experience with&hellip;",
+      "details": "C#, WinForms, WPF, SpecEasy/NUnit, Visual Studio, ReSharper, TeamCity, ASP.NET MVC, Python, Microsoft SQL Server, Mercurial, Elasticsearch, IIS"
+    },
+    {
+      "title": "Experience and exposure to&hellip;",
+      "details": "C, Java, Google App Engine, Flask, classic ASP &amp; ASP.NET, PHP4, VB6, JSP, SQLite, Oracle 8i/10g, Lotus Notes &amp; Domino Designer, SVN"
+    }
+  ],
+  "education": [
+    {
+      "id": "ucalgary",
+      "degree": "Master of Science - Computer Science",
+      "institution": {
+        "name": "University of Calgary",
+        "url": "https://ucalgary.ca/"
+      },
+      "start": "2007-09",
+      "end": "2009-12",
+      "details": [
+        {
+          "label": "Research Area",
+          "value": "Human-Computer Interaction and Software Engineering"
+        },
+        {
+          "label": "Supervision",
+          "value": "<a href=\"http://saul.cpsc.ucalgary.ca/\" rel=\"external\" target=\"_blank\">Dr. Saul Greenberg</a> (<abbr title=\"Human-Computer Interaction\">HCI</abbr> &amp; <abbr title=\"Computer-Supported Cooperative Work\">CSCW</abbr>) and <a href=\"https://lsmr.org/walker\" rel=\"external\" target=\"_blank\">Dr. Robert Walker</a> (Software Engineering)"
+        },
+        {
+          "label": "GPA",
+          "value": "4.0 on a 4.0 scale"
+        },
+        {
+          "label": "Publications",
+          "value": "<a href=\"http://grouplab.cpsc.ucalgary.ca/Publications/2010-IssueTracking.CSCW\" rel=\"external\" target=\"_blank\">Communication, Collaboration, and Bugs: The Social Nature of Issue Tracking in Small, Collocated Teams</a> (CSCW, 2010), <a href=\"http://grouplab.cpsc.ucalgary.ca/Publications/2009-Bertram.MScThesis\" rel=\"external\" target=\"_blank\">The Social Nature of Issue Tracking in Software Engineering</a> (Master's Thesis, 2009), <a href=\"http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.161.2510\" rel=\"external\" target=\"_blank\">Global-scale Anti-spam Testing in Your Own Back Yard</a> (CEAS, 2008)"
+        },
+        {
+          "label": "Awards",
+          "value": "Natural Sciences and Engineering Research Council of Canada Graduate Scholarship M, Alberta Ingenuity MSc Student Scholarship, iCORE Graduate Student Scholarship, Departmental Research Award (x2)"
+        }
+      ]
+    },
+    {
+      "id": "uwindsor",
+      "degree": "Bachelor of Science (Honours) Co-op - Computer Science",
+      "institution": {
+        "name": "University of Windsor",
+        "url": "https://uwindsor.ca/"
+      },
+      "start": "2002-09",
+      "end": "2007-04",
+      "details": [
+        {
+          "label": "Specialization",
+          "value": "Software Engineering"
+        },
+        {
+          "label": "Minor",
+          "value": "Mathematics"
+        },
+        {
+          "label": "GPA",
+          "value": "12.8 on a 13.0 scale, graduated top of class with Great Distinction"
+        },
+        {
+          "label": "Teaching Assistant",
+          "value": "Philosophy (Fall 2003), Computer Science (Winter 2004)"
+        },
+        {
+          "label": "Awards",
+          "value": "Dean's Renewable Entrance Scholarship, Dean's List &amp; President's Roll (2002 &ndash; 2007), NSERC Undergraduate Research Award (2004), Computer Science Society Scholarship (2004, 2006), Board of Governors Medal for Science (2006) and Computer Science (2007), Co-op Rising Star Award"
+        }
+      ]
+    }
+  ]
+}

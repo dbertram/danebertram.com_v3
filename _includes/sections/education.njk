@@ -1,0 +1,22 @@
+<section class="resume-section education">
+  <h2>Education</h2>
+  <ul>
+    {% for entry in resume.education %}
+      <li class="expandable">
+        <input type="checkbox" id="edu_{{ entry.id }}" />
+        <label for="edu_{{ entry.id }}">
+          {{ entry.degree }}, <a class="company-name" href="{{ entry.institution.url }}" rel="external" target="_blank">{{ entry.institution.name }}</a>
+          <aside class="date-range"><time datetime="{{ entry.start }}">{{ entry.start | monthYear }}</time> &ndash; <time datetime="{{ entry.end }}">{{ entry.end | monthYear }}</time></aside>
+        </label>
+        <ul class="expandable-content">
+          {% for detail in entry.details %}
+            <li>
+              {{ detail.label }}
+              <aside>{{ detail.value | safe }}</aside>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

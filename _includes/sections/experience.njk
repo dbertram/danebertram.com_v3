@@ -1,0 +1,47 @@
+<section class="resume-section experience">
+  <h2>Experience</h2>
+  <ul>
+    {% for entry in resume.experience %}
+      <li class="expandable">
+        <input type="checkbox" id="exp_{{ entry.id }}" />
+        <label for="exp_{{ entry.id }}">
+          {{ entry.title }},
+          {% if entry.company.url %}
+            <a class="company-name" href="{{ entry.company.url }}" rel="external" target="_blank">
+              {% if entry.company.abbr_title %}
+                <abbr title="{{ entry.company.abbr_title }}">{{ entry.company.name }}</abbr>
+              {% else %}
+                {{ entry.company.name }}
+              {% endif %}
+            </a>
+          {% else %}
+            {{ entry.company.name }}
+          {% endif %}
+          {% if entry.company.suffix_html %}
+            {{ " " }}{{ entry.company.suffix_html | safe }}
+          {% endif %}
+          <aside class="date-range"><time datetime="{{ entry.start }}">{{ entry.start | monthYear }}</time> &ndash; <time{% if entry.end %} datetime="{{ entry.end }}"{% endif %}>{{ entry.end | monthYearOrPresent }}</time></aside>
+        </label>
+        <ul class="expandable-content">
+          {% if entry.positions %}
+            {% for position in entry.positions %}
+              <li>
+                <strong>{{ position.title }}</strong>
+                <aside class="date-range"><time datetime="{{ position.start }}">{{ position.start | monthYear }}</time> &ndash; <time{% if position.end %} datetime="{{ position.end }}"{% endif %}>{{ position.end | monthYearOrPresent }}</time></aside>
+                <ul>
+                  {% for highlight in position.highlights %}
+                    <li>{{ highlight | safe }}</li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+          {% else %}
+            {% for highlight in entry.highlights %}
+              <li>{{ highlight | safe }}</li>
+            {% endfor %}
+          {% endif %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

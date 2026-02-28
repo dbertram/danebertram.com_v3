@@ -1,0 +1,13 @@
+<section class="resume-section skills">
+  <h2>Skills</h2>
+  <ul>
+    {% for entry in resume.skills %}
+      <li>
+        <h3>
+          {{ entry.title | safe }}
+          <aside>{{ entry.details | safe }}</aside>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
