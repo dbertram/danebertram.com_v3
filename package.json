@@ -7,7 +7,11 @@
     "dev": "yarn start",
     "start": "yarn build:css && ELEVENTY_ENV=development eleventy --serve",
     "build": "yarn build:css && eleventy",
-    "build:css": "sass css/main.scss css/main.css --style=compressed --no-source-map"
+    "build:css": "sass css/main.scss css/main.css --style=compressed --no-source-map",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint .eleventy.js scripts",
+    "lint:fix": "oxlint --fix .eleventy.js scripts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,8 @@
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
     "sass": "^1.97.3"
   }
 }
