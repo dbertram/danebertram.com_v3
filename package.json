@@ -2,6 +2,12 @@
   "name": "danebertram.com",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/dbertram/danebertram.com_v3#readme",
+  "author": "Dane Bertram",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbertram/danebertram.com_v3.git"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "yarn start",
@@ -13,12 +19,6 @@
     "lint": "oxlint .eleventy.js scripts",
     "lint:fix": "oxlint --fix .eleventy.js scripts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dbertram/danebertram.com_v3.git"
-  },
-  "author": "Dane Bertram",
-  "homepage": "https://github.com/dbertram/danebertram.com_v3#readme",
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

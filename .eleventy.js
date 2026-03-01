@@ -1,15 +1,15 @@
-const fs = require("node:fs")
-const path = require("node:path")
+const fs = require('node:fs')
+const path = require('node:path')
 
-const monthYearFormatter = new Intl.DateTimeFormat("en-US", {
-  month: "long",
-  year: "numeric",
-  timeZone: "UTC",
+const monthYearFormatter = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC',
 })
 
 function formatMonthYear(value) {
   if (!value) {
-    return ""
+    return ''
   }
 
   const match = /^(\d{4})-(\d{2})$/.exec(value)
@@ -27,12 +27,12 @@ function formatMonthYear(value) {
 }
 
 module.exports = function (eleventyConfig) {
-  const iconsDirectory = path.join(__dirname, "_includes", "icons")
+  const iconsDirectory = path.join(__dirname, '_includes', 'icons')
   const iconCache = new Map()
 
-  eleventyConfig.addShortcode("inlineIcon", (iconName) => {
+  eleventyConfig.addShortcode('inlineIcon', (iconName) => {
     if (!iconName) {
-      return ""
+      return ''
     }
 
     let iconSource = iconCache.get(iconName)
@@ -42,23 +42,23 @@ module.exports = function (eleventyConfig) {
         throw new Error(`Unknown icon: ${iconName}`)
       }
 
-      iconSource = fs.readFileSync(iconPath, "utf8").trim()
+      iconSource = fs.readFileSync(iconPath, 'utf8').trim()
       iconCache.set(iconName, iconSource)
     }
     return iconSource
   })
 
-  eleventyConfig.addFilter("monthYear", (value) => formatMonthYear(value))
+  eleventyConfig.addFilter('monthYear', (value) => formatMonthYear(value))
 
-  eleventyConfig.addFilter("monthYearOrPresent", (value) => {
+  eleventyConfig.addFilter('monthYearOrPresent', (value) => {
     if (!value) {
-      return "Present"
+      return 'Present'
     }
 
     return formatMonthYear(value)
   })
 
-  eleventyConfig.addPassthroughCopy("favicon.ico")
-  eleventyConfig.addPassthroughCopy("images/*")
-  eleventyConfig.addPassthroughCopy("css/*.css")
+  eleventyConfig.addPassthroughCopy('favicon.ico')
+  eleventyConfig.addPassthroughCopy('images/*')
+  eleventyConfig.addPassthroughCopy('css/*.css')
 }

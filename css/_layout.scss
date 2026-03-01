@@ -1,19 +1,18 @@
-@use "sass:math";
-@use "_global_vars" as *;
+@use 'sass:math';
+@use '_global_vars' as *;
 
 body {
-  background: $base-dark-color url("../images/debut_dark.png") repeat fixed;
+  background: $base-dark-color url('../images/debut_dark.png') repeat fixed;
   color: $base-light-color;
 
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
     /* on retina, use image that's scaled by 2 */
-    background-image: url("../images/debut_dark_@2x.png");
+    background-image: url('../images/debut_dark_@2x.png');
     background-size: 200px 200px;
   }
 }
@@ -58,7 +57,7 @@ abbr[title] {
     border-radius: math.div($avatar-size, 2);
     border: 3px solid $base-light-color;
 
-    background-image: url("../images/dane_bertram_avatar.jpg");
+    background-image: url('../images/dane_bertram_avatar.jpg');
     background-size: cover;
     background-position: -0.3rem -1.2rem; // face-centering correction
 
@@ -97,7 +96,12 @@ abbr[title] {
   padding: 3rem;
   padding-bottom: 2rem;
 
-  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
     &:first-child {
       margin-top: 0;
     }
@@ -162,7 +166,7 @@ abbr[title] {
       padding-right: 2rem; // ensure label text doesn't overlap up/down arrow
 
       &::before {
-        content: "";
+        content: '';
         border-bottom: 2px solid $base-light-color;
         border-right: 2px solid $base-light-color;
         position: absolute;
@@ -184,7 +188,7 @@ abbr[title] {
       }
     }
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       display: none;
     }
 
@@ -208,7 +212,8 @@ abbr[title] {
     display: none;
     margin-top: 1.5rem;
 
-    &, ul {
+    &,
+    ul {
       margin-left: 1rem;
       padding-left: 0.4rem;
       padding-right: 2rem; // match label padding-right above

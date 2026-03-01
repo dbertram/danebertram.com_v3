@@ -1,12 +1,14 @@
-@use "normalize";
-@use "_typography";
-@use "_layout";
-@use "_print";
+@use 'normalize';
+@use '_typography';
+@use '_layout';
+@use '_print';
 
 // http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
