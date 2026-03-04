@@ -1,8 +1,18 @@
 {
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.tabSize": 2,
   "files.eol": "\n",
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
   "search.exclude": {
     "node_modules": true,
     "yarn.lock": true,
