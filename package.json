@@ -1,8 +1,10 @@
 {
   "name": "danebertram.com",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "homepage": "https://github.com/dbertram/danebertram.com_v3#readme",
+  "license": "UNLICENSED",
   "author": "Dane Bertram",
   "repository": {
     "type": "git",
