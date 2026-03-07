@@ -65,4 +65,5 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('favicon.ico')
   eleventyConfig.addPassthroughCopy('images/*')
   eleventyConfig.addPassthroughCopy('css/*.css')
+  eleventyConfig.ignores.add('README.md')
 }
