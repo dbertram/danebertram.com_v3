@@ -1,11 +1,15 @@
-const fs = require('node:fs')
-const path = require('node:path')
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const monthYearFormatter = new Intl.DateTimeFormat('en-US', {
   month: 'long',
   year: 'numeric',
   timeZone: 'UTC',
 })
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 function formatMonthYear(value) {
   if (!value) {
@@ -26,7 +30,7 @@ function formatMonthYear(value) {
   return monthYearFormatter.format(new Date(Date.UTC(year, month - 1, 1)))
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   const iconsDirectory = path.join(__dirname, '_includes', 'icons')
   const iconCache = new Map()
 

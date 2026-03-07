@@ -18,8 +18,8 @@
     "build:css": "sass css/main.scss css/main.css --style=compressed --no-source-map",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "lint": "oxlint .eleventy.js scripts",
-    "lint:fix": "oxlint --fix .eleventy.js scripts"
+    "lint": "oxlint eleventy.config.mjs",
+    "lint:fix": "oxlint --fix eleventy.config.mjs"
   },
   "dependencies": {},
   "devDependencies": {
