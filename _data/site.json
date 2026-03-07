@@ -3,7 +3,7 @@
   "description": "A proud builder of bits at YNAB. Learn a little about who I am, what I do, and why you might like to work with me.",
   "keywords": "Dane Bertram, Software Developer, YNAB, Articulate, Fog Creek Software, FogBugz, WebPutty, Dabsoft Solutions, Dane the Canadian, do these actually do anything?",
   "url": "https://danebertram.com/",
-  "image": "https://danebertram.com/images/dane_bertram_avatar.jpg",
+  "image": "/images/dane_bertram_avatar.jpg",
   "header": {
     "nameplate_email": "mailto:dbertram+resume@gmail.com",
     "tagline_html": "A proud builder of bits at <abbr title=\"You Need A Budget\">YNAB</abbr>",

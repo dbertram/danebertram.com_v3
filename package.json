@@ -13,21 +13,22 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run start",
-    "start": "npm run build:css && ELEVENTY_ENV=development eleventy --serve",
-    "build": "npm run build:css && eleventy",
-    "build:css": "sass css/main.scss css/main.css --style=compressed --no-source-map",
+    "start": "ELEVENTY_ENV=development eleventy --serve",
+    "build": "eleventy",
     "clean": "rm -rf _site",
     "test": "echo 'no tests (yet)'",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "lint": "oxlint eleventy.config.mjs",
-    "lint:fix": "oxlint --fix eleventy.config.mjs"
+    "lint": "oxlint eleventy.config.mjs src",
+    "lint:fix": "oxlint --fix eleventy.config.mjs src"
   },
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-vite": "^7.0.0",
     "oxfmt": "^0.35.0",
     "oxlint": "^1.50.0",
-    "sass": "^1.97.3"
+    "sass": "^1.97.3",
+    "vite": "^7.3.1"
   }
 }

@@ -1,36 +1,21 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-
-const monthYearFormatter = new Intl.DateTimeFormat('en-US', {
-  month: 'long',
-  year: 'numeric',
-  timeZone: 'UTC',
-})
+import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
+import { formatMonthYear } from './src/shared/date.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-
-function formatMonthYear(value) {
-  if (!value) {
-    return ''
-  }
-
-  const match = /^(\d{4})-(\d{2})$/.exec(value)
-  if (!match) {
-    return value
-  }
-
-  const year = Number(match[1])
-  const month = Number(match[2])
-  if (month < 1 || month > 12) {
-    return value
-  }
-
-  return monthYearFormatter.format(new Date(Date.UTC(year, month - 1, 1)))
-}
+const siteData = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'site.json'), 'utf8'))
+const isDevServer = process.env.ELEVENTY_ENV === 'development'
 
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    viteOptions: {
+      base: isDevServer ? '/' : siteData.url, // ensures og:image meta tag uses an absolute URL instead of relative
+    },
+  })
+
   const iconsDirectory = path.join(__dirname, '_includes', 'icons')
   const iconCache = new Map()
 
@@ -53,7 +38,6 @@ export default function (eleventyConfig) {
   })
 
   eleventyConfig.addFilter('monthYear', (value) => formatMonthYear(value))
-
   eleventyConfig.addFilter('monthYearOrPresent', (value) => {
     if (!value) {
       return 'Present'
@@ -64,6 +48,6 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('favicon.ico')
   eleventyConfig.addPassthroughCopy('images/*')
-  eleventyConfig.addPassthroughCopy('css/*.css')
+  eleventyConfig.addPassthroughCopy('css')
   eleventyConfig.ignores.add('README.md')
 }
