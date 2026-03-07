@@ -16,6 +16,7 @@
     "start": "ELEVENTY_ENV=development eleventy --serve",
     "build": "eleventy",
     "clean": "rm -rf _site",
+    "rebuild": "npm run clean && npm run build",
     "test": "echo 'no tests (yet)'",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
