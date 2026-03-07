@@ -16,6 +16,7 @@
     "start": "npm run build:css && ELEVENTY_ENV=development eleventy --serve",
     "build": "npm run build:css && eleventy",
     "build:css": "sass css/main.scss css/main.css --style=compressed --no-source-map",
+    "test": "echo 'no tests (yet)'",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
     "lint": "oxlint eleventy.config.mjs",
