@@ -12,9 +12,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "dev": "yarn start",
-    "start": "yarn build:css && ELEVENTY_ENV=development eleventy --serve",
-    "build": "yarn build:css && eleventy",
+    "dev": "npm run start",
+    "start": "npm run build:css && ELEVENTY_ENV=development eleventy --serve",
+    "build": "npm run build:css && eleventy",
     "build:css": "sass css/main.scss css/main.css --style=compressed --no-source-map",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
