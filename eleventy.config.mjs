@@ -46,8 +46,6 @@ export default function (eleventyConfig) {
     return formatMonthYear(value)
   })
 
-  eleventyConfig.addPassthroughCopy('favicon.ico')
-  eleventyConfig.addPassthroughCopy('images/*')
-  eleventyConfig.addPassthroughCopy('css')
+  eleventyConfig.addPassthroughCopy('assets')
   eleventyConfig.ignores.add('README.md')
 }
