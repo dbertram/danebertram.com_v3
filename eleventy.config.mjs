@@ -7,13 +7,25 @@ import { formatMonthYear } from './src/shared/date.mjs'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const siteData = JSON.parse(fs.readFileSync(path.join(__dirname, '_data', 'site.json'), 'utf8'))
-const isDevServer = process.env.ELEVENTY_ENV === 'development'
+const deployOrigin =
+  process.env.DEPLOY_PRIME_URL ?? // Netlify branch deploys and deploy previews
+  process.env.URL ?? // Netlify production deploys
+  (process.env.ELEVENTY_ENV === 'development' ? 'http://localhost:8080/' : siteData.url)
+
+function toAbsoluteUrl(pathname, origin = deployOrigin) {
+  if (!pathname) {
+    return origin
+  }
+
+  return new URL(pathname, origin).href
+}
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(EleventyVitePlugin, {
-    viteOptions: {
-      base: isDevServer ? '/' : siteData.url, // ensures og:image meta tag uses an absolute URL instead of relative
-    },
+  eleventyConfig.addPlugin(EleventyVitePlugin)
+
+  eleventyConfig.addGlobalData('deployOrigin', deployOrigin)
+  eleventyConfig.addFilter('absoluteUrl', (pathname, origin = deployOrigin) => {
+    return toAbsoluteUrl(pathname, origin)
   })
 
   const iconsDirectory = path.join(__dirname, '_includes', 'icons')

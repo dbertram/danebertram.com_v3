@@ -9,8 +9,8 @@
 
     <meta property="og:title" content="{{ site.name }} - {{ site.title }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:image" content="{{ site.image }}">
+    <meta property="og:url" content="{{ page.url | absoluteUrl(deployOrigin) }}">
+    <meta property="og:image" content="{{ site.og_image | absoluteUrl(deployOrigin) }}">
 
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/assets/styles/main.scss" />
