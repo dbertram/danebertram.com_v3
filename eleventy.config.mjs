@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
-import { formatMonthYear } from './src/shared/date.mjs'
+import { formatDurationRange, formatMonthYear } from './src/shared/date.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -21,7 +21,15 @@ function toAbsoluteUrl(pathname, origin = deployOrigin) {
 }
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(EleventyVitePlugin)
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    viteOptions: {
+      resolve: {
+        alias: {
+          '@shared': path.join(__dirname, 'src', 'shared'),
+        },
+      },
+    },
+  })
 
   eleventyConfig.addGlobalData('deployOrigin', deployOrigin)
   eleventyConfig.addFilter('absoluteUrl', (pathname, origin = deployOrigin) => {
@@ -56,6 +64,9 @@ export default function (eleventyConfig) {
     }
 
     return formatMonthYear(value)
+  })
+  eleventyConfig.addFilter('durationText', (startValue, endValue) => {
+    return formatDurationRange(startValue, endValue)
   })
 
   eleventyConfig.addPassthroughCopy('assets')

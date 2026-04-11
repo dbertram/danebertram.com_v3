@@ -1,3 +1,5 @@
+{% from "components/date-range.njk" import renderDateRange %}
+
 <section class="resume-section education">
   <h2>Education</h2>
   <ul>
@@ -6,7 +8,7 @@
         <input type="checkbox" id="edu_{{ entry.id }}" />
         <label for="edu_{{ entry.id }}">
           {{ entry.degree }}, <a class="company-name" href="{{ entry.institution.url }}" rel="external" target="_blank">{{ entry.institution.name }}</a>
-          <aside class="date-range"><time datetime="{{ entry.start }}">{{ entry.start | monthYear }}</time> &ndash; <time datetime="{{ entry.end }}">{{ entry.end | monthYear }}</time></aside>
+          {{ renderDateRange(entry.start, entry.end) }}
         </label>
         <ul class="expandable-content">
           {% for detail in entry.details %}
