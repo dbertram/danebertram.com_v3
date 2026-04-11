@@ -25,7 +25,6 @@
     "lint": "oxlint eleventy.config.mjs src assets/scripts",
     "lint:fix": "oxlint --fix eleventy.config.mjs src assets/scripts"
   },
-  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-vite": "^7.0.0",
