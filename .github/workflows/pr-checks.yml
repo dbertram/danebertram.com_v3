@@ -10,7 +10,7 @@ on:
 
 jobs:
   quality:
-    name: Lint, Format, Test
+    name: Lint, Format, Test, Build
     runs-on: ubuntu-latest
 
     steps:
@@ -34,3 +34,6 @@ jobs:
 
       - name: Test
         run: npm run test
+
+      - name: Build
+        run: npm run build
