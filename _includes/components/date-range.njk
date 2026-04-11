@@ -1,0 +1,18 @@
+{% macro renderDateRange(start, end, includeDuration=false) %}
+  <aside class="date-range">
+    <time datetime="{{ start }}">{{ start | monthYear }}</time>
+    &ndash;
+    <time{% if end %} datetime="{{ end }}"{% endif %}>{{ end | monthYearOrPresent }}</time>
+    {% if includeDuration %}
+      {% if end %}
+        <span class="duration">({{ start | durationText(end) }})</span>
+      {% else %}
+        <span class="duration duration--ongoing" data-start="{{ start }}" hidden></span>
+      {% endif %}
+    {% endif %}
+  </aside>
+{% endmacro %}
+
+{% macro renderDateRangeWithDuration(start, end) %}
+  {{ renderDateRange(start, end, true) }}
+{% endmacro %}

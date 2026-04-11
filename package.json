@@ -20,8 +20,8 @@
     "test": "echo 'no tests (yet)'",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
-    "lint": "oxlint eleventy.config.mjs src",
-    "lint:fix": "oxlint --fix eleventy.config.mjs src"
+    "lint": "oxlint eleventy.config.mjs src assets/scripts",
+    "lint:fix": "oxlint --fix eleventy.config.mjs src assets/scripts"
   },
   "dependencies": {},
   "devDependencies": {
