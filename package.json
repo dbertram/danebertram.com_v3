@@ -17,7 +17,8 @@
     "build": "eleventy",
     "clean": "rm -rf _site",
     "rebuild": "npm run clean && npm run build",
-    "test": "echo 'no tests (yet)'",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "oxfmt --write .",
     "format:check": "oxfmt --check .",
     "lint": "oxlint eleventy.config.mjs src assets/scripts",
@@ -30,6 +31,7 @@
     "oxfmt": "^0.35.0",
     "oxlint": "^1.50.0",
     "sass": "^1.97.3",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vitest": "^4.1.2"
   }
 }

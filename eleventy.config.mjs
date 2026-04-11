@@ -69,6 +69,8 @@ export default function (eleventyConfig) {
     return formatDurationRange(startValue, endValue)
   })
 
-  eleventyConfig.addPassthroughCopy('assets')
+  eleventyConfig.addPassthroughCopy('assets', {
+    filter: ['**/*', '!**/*.test.*'],
+  })
   eleventyConfig.ignores.add('README.md')
 }
